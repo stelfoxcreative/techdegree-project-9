@@ -1,0 +1,107 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// BEM Mixins
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Media query Mixins
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint--sm) and (max-width: $brkpoint--md) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $brkpoint--md + 1) {
+      @content;
+    }
+  }
+  @else {
+    @error "No value could be retrieved for `#{$break}`. "
+  }
+}
+
+// Generate modifier color classes
+@mixin ui-colors($map, $p-el:null) {
+  @each $theme, $color in $map {
+    @include m($theme) {
+      background-color: $color;
+      //If an $p-el value is passed, generate pseudo-element bg colors. Used on progbars.
+      @if $p-el {
+        &:after {
+          background-color: lighten($color, 8%);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+
+
+
+
+// Adjacent sibling margins
+@mixin doubly($margin: 1em) {
+  & + & {
+   margin-left: $margin;
+   @content;
+  }
+}
+
+// Flex settings
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-dir($dir) {
+  -webkit-flex-direction: $dir;
+  -moz-flex-direction: $dir;
+  -ms-flex-direction: $dir;
+  flex-direction: $dir;
+}
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+
+// Flex grid columns
+@mixin g-columns {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+    // Generate and output the column modifier classes
+    &--#{$i} {
+      flex-basis: percentage($target / $context);
+    }
+  }
+}

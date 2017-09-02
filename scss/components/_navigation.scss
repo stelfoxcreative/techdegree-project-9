@@ -1,0 +1,31 @@
+// ==========================================================================
+// Navigation
+// ==========================================================================
+
+.nav {
+  margin-top: em(24px);
+  @include flex;
+  @include flex-dir(column);
+  @include mq(medium) {
+    @include flex-dir(row);
+    @include justify-content(flex-end);
+  }
+  &__item {
+    @extend %nav__item;
+    & a {
+      color: $grey;
+      font-weight: $font-weight--light;
+      padding: 10px 20px;
+      border-radius: $br--default;
+      text-decoration: none;
+      &:hover {
+        background-color: $turquoise;
+        color: $white;
+      }
+    }
+  }
+}
+
+.link {
+	@extend %link;
+}

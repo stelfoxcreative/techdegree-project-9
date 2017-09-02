@@ -1,0 +1,91 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+// Links
+%link {
+  color: $color-secondary;
+	text-decoration: none;
+}
+
+// Images
+%image {
+  display: block;
+  max-width: 100%;
+  margin-bottom: em(24px);
+}
+
+// Headlines
+%headline--primary {
+  color: $color-primary;
+  font-weight: $font-weight--medium;
+  font-size: em(32px);
+  line-height: (46px/42px);
+  margin: 0 0 24px 0;
+}
+
+%headline--secondary {
+  color: palette(grey, light);
+  letter-spacing: $letter-space;
+  font-weight: $font-weight--thin;
+  font-size: em(20px);
+  font-family: $font-family--secondary;
+  margin: 0 0 24px 0;
+}
+
+// Nav items
+%nav__item {
+  font-size: em(20px);
+  text-align: center;
+  margin-bottom: em(24px);
+}
+
+// Clearfix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Hide element
+%hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+%center {
+  float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Center alignment
+%center-align {
+	text-align: center;
+}
+
+// Buttons
+%btn {
+  padding: 10px 30px;
+  border: 0;
+  border-radius : $br--default;
+  color: $white;
+  font-size : em(14px);
+  font-weight: $font-weight--medium;
+  transition: opacity $trns-duration;
+  display: block;
+  &:hover {
+    opacity: .75;
+  }
+  &:active {
+    opacity: initial;
+  }
+}

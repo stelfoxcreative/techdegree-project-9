@@ -1,0 +1,89 @@
+// ==========================================================================
+// Variables
+// ==========================================================================
+
+
+// Colors
+$color-white: #fff;
+
+$color-ship-cove: #7477bf;
+$color-de-york: #81c98f;
+$color-glacier: #74b1bf;
+
+
+// Font Stacks
+$font-url--google        : 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
+$font-family--primary    : 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+// Descriptive Base Colors
+$white : #fff;
+$black : #0b0b0b;
+$grey  : #fbfbfb;
+
+// Colors
+$turquoise: #4fe3c2;
+$malibu: #48defe;
+$de-york: #78c58f;
+$pink-salmon: #ff8f92;
+$tangerine: #ff9c7e;
+$mauve: #bd9cfd;
+
+// Color Palette Modifiers
+$color-palettes: (
+  grey: (
+    xx-light : lighten($grey, 43%),
+    x-light  : lighten($grey, 35%),
+    light    : lighten($grey, 12%),
+    base     : $grey,
+    dark     : darken($grey, 15%),
+    x-dark   : darken($grey, 60%)
+  ),
+  black: (
+    light    : lighten($black, 10%),
+    base     : $black,
+    dark     : darken($black, 10%)
+  )
+);
+
+// UI Colors
+$ui-colors: (
+  default : $malibu,
+  success : $de-york,
+  error   : $pink-salmon,
+  warning : $tangerine,
+  info    : $mauve
+);
+
+// Color Usage
+$color-primary   : $turquoise;
+$color-secondary : $malibu;
+
+// Text
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    : 1px;
+
+// Border radius
+$br--default    : 4px;
+$br--round      : 50%;
+
+// Transitions
+$trns-duration  : .3s;
+
+// Grid
+$g-col-width    : 65px !default;
+$g-gutter-width : 20px !default;
+$g-col-count    : 12 !default;
+$g-cont-max-w   : 1050px !default;
+
+// Breakpoints
+$brkpoint--sm    : 1px;
+$brkpoint--md    : 768px;

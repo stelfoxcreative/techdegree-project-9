@@ -1,0 +1,86 @@
+// ==========================================================================
+// Grid Columns
+// ==========================================================================
+
+// Generates grid columns
+.grid__row {
+	@extend %clearfix;
+	margin-bottom: em(24px);
+	display: block;
+	@include mq(medium) {
+		@include flex;
+	}
+}
+
+.grid__col {
+	@include mq(medium) {
+		@include g-columns;
+	}
+}
+
+// Column styles
+[class^="grid__col--"] {
+	@include mq(small)  {
+		margin-top: em(12px);
+		margin-bottom: em(12px);
+	}
+	@include mq(medium) {
+		@include doubly(percentage($g-gutter-width / $context));
+		min-height: 1px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: $br--default;
+	}
+}
+
+$theme-grid: (
+	grid__col--12 : saturate($de-york, 10%),
+	grid__col--8  : darken($de-york, 10%),
+	grid__col--7  : saturate($tangerine, 20%),
+	grid__col--6  : darken($mauve, 10%),
+	grid__col--4  : darken($tangerine, 5%),
+	grid__col--5  : saturate($de-york, 30%),
+	grid__col--3  : saturate($mauve, 10%)
+);
+
+// Generate Poly grid display classes
+@each $value, $color in $theme-grid {
+	.#{$value}.theme__colors {
+		color: $white;
+		padding: 8px;
+		@extend %center-align;
+		background-color: $color;
+	}
+}
+
+.card {
+	max-width: 740px;
+	& p:first-child {
+		font-size: em(22px);
+		color: palette(grey, light);
+	}
+}
+
+// Center elements
+.centered {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container {
+  max-width: $g-cont-max-w;
+  @extend .centered;
+  padding: em(30px);
+}
+
+.col-half {
+	width: 50%;
+}
+
+
+
+
+
+
+

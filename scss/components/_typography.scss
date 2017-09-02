@@ -1,0 +1,49 @@
+// ==========================================================================
+// Typography
+// ==========================================================================
+
+.headline--primary {
+  @extend %headline--primary;
+}
+
+.headline--secondary {
+  @extend %headline--secondary;
+}
+
+.blockquote {
+  border-left: 10px solid $color-primary;
+  padding: 0 16% 0 10px;
+  font-weight: $font-weight--bold;
+  font-size: em(20px);
+  font-style: italic;
+  color: $black;
+  margin: em(24px) 0;
+}
+
+h1, h2 {
+	// margin: 0;
+  font-family: $font-family--secondary;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin: 24px 0;
+  font-family: $font-family--primary;
+    font-weight: 400;
+    color: #666;
+}
+
+
+h4 {
+  margin: 0 0 4px;
+  font-family: $font-family--primary;
+  font-size: 16px;
+}
+
+
+.text-thin {
+  font-weight: $font-weight--thin;
+  font-size: 2.5rem;
+}

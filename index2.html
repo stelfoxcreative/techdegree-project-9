@@ -1,0 +1,120 @@
+<html>
+<head>
+	<title>Hey</title>
+</head>
+<style>
+body {
+	margin: 100px;
+}
+
+	.tool {
+		cursor: help;
+		position: relative;
+	}
+	.tool::before,
+	.tool::after {
+		position: absolute;
+		left: 50%;
+		opacity: 0;
+		z-index: -100;
+	}
+	.tool:hover::before,
+	.tool:focus::before,
+	.tool:hover::after,
+	.tool:focus::after {
+		opacity: 1;
+		z-index: 100;
+		transform: scale(1) translateY(0);
+	}
+	.tool::before {
+		border-style: solid;
+		border-width: 1em .75em 0;
+		border-color: grey transparent transparent transparent;
+		bottom: 100%;
+		margin-left: -.5em;
+		content: "";
+		transform: scale(.6) translateY(-90%);
+		transition: all .65s cubic-bezier(.85, -0.18, .31, 1.26), opacity .65s .5s;
+	}
+
+	.tool:hover::before,
+	.tool:focus::before {
+		transition-delay: .2s;
+	}
+
+	.tool::after {
+		background: grey;
+		border-radius: .25em;
+		bottom: 180%;
+		color: white;
+		width: 17.5em;
+		padding: 1em;
+		margin-left: -8.75em;
+		content: attr(data-tip);
+		transform: scale(.6) translateY(50%);
+		transition: all .65s cubic-bezier(.85, -0.18, .31, 1.26), .2s;
+	}
+	.tool:hover::after,
+	.tool:focus::after {
+		transition-delay: 0s;
+	}
+</style>
+
+<script type="text/javascript">
+	
+// Template literals
+
+// 'String'
+// "String"
+
+
+// `String` template literal
+
+const templateLiteral = `<p>Template literal</p>`;
+
+// Good for multiline strings... HTML sections
+
+const fruitList = `
+	<ul>
+		<li>Bananas</li>
+		<li>Grapes</li>
+	</ul>
+`;
+
+document.write(fruitList);
+
+function like(thing) {
+	return 'I like ' + thing;
+}
+
+function love(thing) {
+	return `I love ${thing}`;
+}
+
+document.write(like('apples'));
+const sentence = `${love('bananas')}`;
+document.write(sentence);
+</script>
+
+
+<script type="text/javascript">
+// Local Storage
+// 5mb size
+// Accessible to all other pages on the site
+// Available even when browser is closed
+// DONT Save Passwords - it is not secure
+// Save preferences for app
+// Only stores string data, name value pairs
+// Value is always a string - need to convert?
+// Load in sync not async, so can block rendering
+// Test you can use local storage first before using
+
+
+</script>
+
+
+
+<body>
+<p>This course <span class="tool" data-tip="Tooltips are the coolest" tabindex="1">covers</span> tool tips. <span class="tool" data-tip="Seriously" tabindex="2">They are awesome</span></p>
+</body>
+</html>
