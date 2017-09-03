@@ -6666,6 +6666,9 @@ a.active,
 .inline-block {
   display: inline-block; }
 
+#message-section {
+  padding-bottom: 50px; }
+
 .blockquote {
   border-left: 10px solid #4fe3c2;
   padding: 0 16% 0 10px;
