@@ -226,12 +226,6 @@
 		"oAP": "\/index.htm",
 		"oF": 0
 		},
-	"\/index2.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/index2.html",
-		"oF": 0
-		},
 	"\/js\/app-min.js": {
 		"ft": 64,
 		"ma": 0,
