@@ -1,9 +1,7 @@
 # Project 9 - Web App Dashboard
 
 ## Project overview
-In this project you have to make an unaccessible site accessible, using a variety of best practices and tools available.
-
-This project was interesting and one area that I will continue to learn and focus on in the future, plenty more to explore here I feel.
+Build an interactive dashboard for a web application using advanced web techniques including SVG graphics and JavaScript programming. The project involves creating tables, charts, graphics and other user interface components in a manner that promotes interactivity and usability.
 
 ## Videos
 https://teamtreehouse.com/library/css-selectors/advanced-selectors/the-attr-css-function
